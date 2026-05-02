@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website for projects, case studies, and professional work."
+    />
+    <title>Michael Yang | Project Portfolio</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">MY</span>
+        <span>
+          <strong>Michael Yang</strong>
+          <small>Project Portfolio</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#archive">Archive</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80"
+            alt=""
+          />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Selected work and applied experiments</p>
+          <h1>Michael Yang</h1>
+          <p class="hero-copy">
+            A focused home for projects, case studies, technical notes, and the
+            decisions behind the work.
+          </p>
+          <div class="hero-actions" aria-label="Portfolio actions">
+            <a class="button primary" href="#work">View Projects</a>
+            <a class="button secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Portfolio summary">
+          <dl>
+            <div>
+              <dt>Focus</dt>
+              <dd>Product, systems, research</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Ready for project details</dd>
+            </div>
+            <div>
+              <dt>Next step</dt>
+              <dd>Add real case studies</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section section-intro" id="work">
+        <div>
+          <p class="eyebrow">Featured projects</p>
+          <h2>Project cards built for quick scanning and deeper stories.</h2>
+        </div>
+        <p>
+          Each card has room for the problem, your role, concrete outcomes, and
+          a visual. Swap the placeholders when you are ready.
+        </p>
+      </section>
+
+      <section class="project-grid" data-project-grid aria-label="Featured projects"></section>
+
+      <section class="section split-section" id="approach">
+        <div>
+          <p class="eyebrow">Working style</p>
+          <h2>How the portfolio can frame your work.</h2>
+        </div>
+        <div class="approach-grid">
+          <article>
+            <span class="step">01</span>
+            <h3>Context</h3>
+            <p>What was unclear, broken, risky, or newly possible before the work began.</p>
+          </article>
+          <article>
+            <span class="step">02</span>
+            <h3>Process</h3>
+            <p>The decisions, tradeoffs, prototypes, and constraints that shaped the solution.</p>
+          </article>
+          <article>
+            <span class="step">03</span>
+            <h3>Outcome</h3>
+            <p>Evidence of impact: shipped features, performance, adoption, revenue, or learning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section archive-section" id="archive">
+        <div class="archive-heading">
+          <p class="eyebrow">Project archive</p>
+          <h2>Smaller work still gets a clear place to live.</h2>
+        </div>
+        <div class="archive-table-wrap">
+          <table class="archive-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Project</th>
+                <th>Type</th>
+                <th>Stack</th>
+              </tr>
+            </thead>
+            <tbody data-archive-table></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Ready for links, resume, and a short note.</h2>
+          <p>
+            This area can become a lightweight contact form, a simple mail link,
+            or a set of professional profiles.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:hello@example.com">Email</a>
+          <a class="button secondary" href="#" aria-label="Add resume link">Resume</a>
+          <a class="button secondary" href="#" aria-label="Add LinkedIn link">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built as a flexible static portfolio shell.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

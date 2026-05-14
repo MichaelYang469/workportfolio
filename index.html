@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio website for projects, case studies, and professional work."
+      content="Michael Yang's computer science and engineering project portfolio."
     />
-    <title>Michael Yang | Project Portfolio</title>
-    <link rel="preconnect" href="https://images.unsplash.com" />
-    <link rel="stylesheet" href="styles.css" />
+    <title>Michael Yang | CS & Engineering Portfolio</title>
+    <link rel="stylesheet" href="styles.css?v=black-clean-sweep" />
   </head>
-  <body>
+  <body class="home-page">
+    <div class="ambient-field" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Home">
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Michael Yang portfolio home">
         <span class="brand-mark" aria-hidden="true">MY</span>
-        <span>
-          <strong>Michael Yang</strong>
-          <small>Project Portfolio</small>
-        </span>
+        <span>Michael Yang</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
         <a href="#archive">Archive</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -31,83 +33,80 @@
 
     <main id="main">
       <section class="hero" id="top">
-        <div class="hero-media" aria-hidden="true">
-          <img
-            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80"
-            alt=""
-          />
-        </div>
-        <div class="hero-content">
-          <p class="eyebrow">Selected work and applied experiments</p>
-          <h1>Michael Yang</h1>
-          <p class="hero-copy">
-            A focused home for projects, case studies, technical notes, and the
-            decisions behind the work.
+        <div class="hero-copy">
+          <p class="eyebrow">Computer science and engineering portfolio</p>
+          <h1>Building useful software from systems, data, and product ideas.</h1>
+          <p>
+            I work across AI research, robotics, computer vision, algorithms,
+            and practical engineering builds, with projects spanning published
+            research, competition robotics, and aerospace simulation.
           </p>
-          <div class="hero-actions" aria-label="Portfolio actions">
-            <a class="button primary" href="#work">View Projects</a>
-            <a class="button secondary" href="#contact">Get in Touch</a>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button" href="assets/Michael-Yang-Resume.pdf">Resume</a>
+            <a
+              class="button"
+              href="https://www.linkedin.com/in/michael-yang-505333249/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="Portfolio summary">
-          <dl>
-            <div>
-              <dt>Focus</dt>
-              <dd>Product, systems, research</dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>Ready for project details</dd>
-            </div>
-            <div>
-              <dt>Next step</dt>
-              <dd>Add real case studies</dd>
-            </div>
-          </dl>
+
+        <aside class="status-panel" aria-label="Portfolio summary">
+          <div>
+            <span>Focus</span>
+            <strong>Multimodal research, robotics, algorithms, reinforcement learning</strong>
+          </div>
+          <div>
+            <span>Project format</span>
+            <strong>Problem, build, stack, outcome</strong>
+          </div>
+          <div>
+            <span>Contact</span>
+            <a href="mailto:michaely2026@gmail.com">michaely2026@gmail.com</a>
+          </div>
         </aside>
       </section>
 
-      <section class="section section-intro" id="work">
-        <div>
-          <p class="eyebrow">Featured projects</p>
-          <h2>Project cards built for quick scanning and deeper stories.</h2>
-        </div>
+      <section class="section-heading" id="projects">
+        <p class="eyebrow">Selected projects</p>
+        <h2>Featured work</h2>
         <p>
-          Each card has room for the problem, your role, concrete outcomes, and
-          a visual. Swap the placeholders when you are ready.
+          A focused set of computer science and engineering projects across
+          research, robotics, and applied systems.
         </p>
       </section>
 
       <section class="project-grid" data-project-grid aria-label="Featured projects"></section>
 
-      <section class="section split-section" id="approach">
-        <div>
-          <p class="eyebrow">Working style</p>
-          <h2>How the portfolio can frame your work.</h2>
+      <section class="stack-section" id="stack">
+        <div class="section-heading compact">
+          <p class="eyebrow">Technical profile</p>
+          <h2>Stack and interests</h2>
         </div>
-        <div class="approach-grid">
+        <div class="stack-grid" aria-label="Technical areas">
           <article>
-            <span class="step">01</span>
-            <h3>Context</h3>
-            <p>What was unclear, broken, risky, or newly possible before the work began.</p>
+            <h3>Languages</h3>
+            <p>Python, JavaScript, Java, C/C++</p>
           </article>
           <article>
-            <span class="step">02</span>
-            <h3>Process</h3>
-            <p>The decisions, tradeoffs, prototypes, and constraints that shaped the solution.</p>
+            <h3>AI and vision</h3>
+            <p>PyTorch, Hugging Face, OpenCV, MLLMs</p>
           </article>
           <article>
-            <span class="step">03</span>
-            <h3>Outcome</h3>
-            <p>Evidence of impact: shipped features, performance, adoption, revenue, or learning.</p>
+            <h3>Robotics and hardware</h3>
+            <p>FTC robotics, Onshape, Machining, Sensor Fusion, Pathing</p>
           </article>
         </div>
       </section>
 
-      <section class="section archive-section" id="archive">
-        <div class="archive-heading">
-          <p class="eyebrow">Project archive</p>
-          <h2>Smaller work still gets a clear place to live.</h2>
+      <section class="archive-section" id="archive">
+        <div class="section-heading compact">
+          <p class="eyebrow">Archive</p>
+          <h2>All projects</h2>
         </div>
         <div class="archive-table-wrap">
           <table class="archive-table">
@@ -115,7 +114,7 @@
               <tr>
                 <th>Year</th>
                 <th>Project</th>
-                <th>Type</th>
+                <th>Area</th>
                 <th>Stack</th>
               </tr>
             </thead>
@@ -127,23 +126,30 @@
       <section class="contact-section" id="contact">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Ready for links, resume, and a short note.</h2>
+          <h2>Let’s connect.</h2>
           <p>
-            This area can become a lightweight contact form, a simple mail link,
-            or a set of professional profiles.
+            Reach out about research, robotics, engineering projects, or
+            internship opportunities.
           </p>
         </div>
         <div class="contact-actions">
-          <a class="button primary" href="mailto:hello@example.com">Email</a>
-          <a class="button secondary" href="#" aria-label="Add resume link">Resume</a>
-          <a class="button secondary" href="#" aria-label="Add LinkedIn link">LinkedIn</a>
+          <a class="button primary" href="mailto:michaely2026@gmail.com">Email</a>
+          <a class="button" href="assets/Michael-Yang-Resume.pdf">Resume</a>
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/michael-yang-505333249/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Built as a flexible static portfolio shell.</p>
-      <a href="#top">Back to top</a>
+      <p>Michael Yang</p>
+      <a href="mailto:michaely2026@gmail.com">michaely2026@gmail.com</a>
     </footer>
 
     <script src="script.js"></script>

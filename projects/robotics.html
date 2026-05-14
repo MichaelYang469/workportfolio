@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Robotics design and path-planning case study by Michael Yang."
+    />
+    <title>Robotics System | Michael Yang</title>
+    <link rel="stylesheet" href="../styles.css?v=black-clean-sweep" />
+  </head>
+  <body class="robotics-page">
+    <div class="ambient-field" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Michael Yang portfolio home">
+        <span class="brand-mark" aria-hidden="true">MY</span>
+        <span>Michael Yang</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="#robot">Robot</a>
+        <a href="#software">Software</a>
+        <a href="#slides">Slides</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="case-hero robotics-hero">
+        <p class="eyebrow">FTC robotics / full-system engineering</p>
+        <h1>Competition robot built for fast cycles and reliable autonomous motion.</h1>
+        <p>
+          Lead hardware and software developer for a full FTC robot system:
+          mechanism design, sensor integration, countersprung slides, and custom pathing.
+        </p>
+        <div class="hero-actions" aria-label="Robotics links">
+          <a class="button primary" href="#robot">View robot</a>
+          <a class="button" href="#software">Software overview</a>
+          <a class="button" href="#slides">Counterspring slides</a>
+        </div>
+      </section>
+
+      <section class="robot-showcase" id="robot">
+        <figure class="robot-main-figure">
+          <img
+            src="../roboticsmedia/itd-robot-cad.png"
+            alt="CAD render of FTC robot 23381 with intake, lifts, chassis, and outtake"
+          />
+          <figcaption>Full robot CAD render.</figcaption>
+        </figure>
+        <div class="robot-summary-grid">
+          <article>
+            <span>Role</span>
+            <strong>Lead hardware + software developer</strong>
+          </article>
+          <article>
+            <span>System</span>
+            <strong>Drive, intake, slides, outtake, sensors</strong>
+          </article>
+          <article>
+            <span>Software</span>
+            <strong>OmniPursuit pathing stack</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section case-grid">
+        <div>
+          <p class="eyebrow">Robot overview</p>
+          <h2>System highlights.</h2>
+        </div>
+        <div class="overview-card-grid">
+          <article>
+            <h3>Mecanum chassis + PTO</h3>
+          </article>
+          <article>
+            <h3>Active intake + transfer</h3>
+          </article>
+          <article>
+            <h3>Outtake + lift</h3>
+          </article>
+          <article>
+            <h3>Sensors + automation</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="media-split">
+        <figure>
+          <img
+            src="../roboticsmedia/itd-robot-real-clean.jpg"
+            alt="Physical FTC robot during build and testing"
+          />
+          <figcaption>Build and testing photo.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">Build process</p>
+          <h2>From CAD to competition hardware.</h2>
+          <p>Custom plates, carbon fiber slides, dense packaging, wiring, and mechanism iteration.</p>
+        </div>
+      </section>
+
+      <section class="case-section case-grid" id="software">
+        <div>
+          <h2 class="omni-title" aria-label="OM-NI-PUR-SUIT">
+            <span>OM</span>
+            <span>NI</span>
+            <span>PUR</span>
+            <span>SUIT</span>
+          </h2>
+        </div>
+        <div class="software-summary">
+          <p>
+            Custom autonomous pathing for fast movement, clean stopping, and
+            rerouting when a planned route becomes blocked.
+          </p>
+          <div class="omnipursuit-overview" aria-label="OmniPursuit static overview">
+            <div class="omni-visual" aria-hidden="true">
+              <svg viewBox="0 0 640 360" role="img">
+                <rect class="omni-field" x="36" y="36" width="568" height="288" />
+                <path class="omni-grid" d="M150 36V324 M264 36V324 M376 36V324 M490 36V324 M36 108H604 M36 180H604 M36 252H604" />
+                <path class="omni-route-muted" d="M88 276 C164 236 204 150 302 144 C410 138 470 216 552 120" />
+                <path class="omni-route-main" d="M88 276 C164 236 204 150 302 144 C410 138 470 216 552 120" />
+                <circle class="omni-lookahead" cx="132" cy="262" r="142" />
+                <path class="omni-chord" d="M132 262 L258 151" />
+                <circle class="omni-node muted" cx="184" cy="221" r="6" />
+                <circle class="omni-node" cx="258" cy="151" r="9" />
+                <g class="omni-robot" transform="translate(132 262) rotate(-28)">
+                  <rect x="-20" y="-15" width="40" height="30" />
+                  <path class="omni-heading" d="M0 -26 L0 -48" />
+                </g>
+              </svg>
+            </div>
+            <div class="algorithm-steps">
+              <article>
+                <span>01</span>
+                <strong>Adaptive pure pursuit</strong>
+                <p>Velocity-scaled lookahead chooses the next reachable target.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <strong>Centripetal correction</strong>
+                <p>Correction reduces drift during fast turns and strafing.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <strong>Glide braking</strong>
+                <p>Kinematic prediction starts slowing before overshoot.</p>
+              </article>
+              <article>
+                <span>04</span>
+                <strong>Dijkstra rerouting</strong>
+                <p>Blocked waypoints can be removed and a new route selected.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="media-split reverse" id="slides">
+        <div>
+          <p class="eyebrow">Hardware highlight</p>
+          <h2>Counterspring slides reduced load while preserving speed.</h2>
+          <p>
+            Staged constant-force springing counterbalanced the changing moving
+            mass of continuous slides, reducing load while keeping lift motion fast.
+          </p>
+          <ul class="case-list compact-list">
+            <li>Carbon fiber slide structure balanced rigidity and weight.</li>
+            <li>Staged spring forces matched the lift’s changing extension load.</li>
+            <li>Mirrored spring placement helped distribute forces cleanly.</li>
+          </ul>
+          <div class="inline-actions">
+            <a class="button" href="../roboticsmedia/counterbalance-explanation.pdf">
+              Additional explanation
+            </a>
+          </div>
+        </div>
+        <figure>
+          <video
+            class="robot-video"
+            controls
+            muted
+            playsinline
+            preload="metadata"
+          >
+            <source src="../roboticsmedia/counterspring-slides.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Counterspring slide test clip.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Michael Yang</p>
+      <a href="../index.html">Back to portfolio</a>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

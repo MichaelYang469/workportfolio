@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="XAIGID-RewardBench research case study by Michael Yang."
+    />
+    <title>XAIGID-RewardBench | Michael Yang</title>
+    <link rel="stylesheet" href="../styles.css?v=black-clean-sweep" />
+  </head>
+  <body class="research-page">
+    <div class="ambient-field" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Michael Yang portfolio home">
+        <span class="brand-mark" aria-hidden="true">MY</span>
+        <span>Michael Yang</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="../index.html#archive">Archive</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="case-hero">
+        <p class="eyebrow">AI research</p>
+        <h1>XAIGID-RewardBench: Explainable AI-Generated Image Detection</h1>
+        <p>
+          First-author research benchmark for evaluating whether multimodal LLMs
+          can judge explanation quality in AI-generated image detection tasks.
+        </p>
+        <div class="hero-actions" aria-label="Research links">
+          <a
+            class="button primary"
+            href="https://arxiv.org/abs/2511.12363"
+            target="_blank"
+            rel="noreferrer"
+          >
+            arXiv paper
+          </a>
+          <a
+            class="button"
+            href="https://github.com/RewardBench/XAIGID-RewardBench"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a class="button" href="#benchmark">View example</a>
+        </div>
+      </section>
+
+      <section class="metric-strip" aria-label="Research summary">
+        <article>
+          <span>Scale</span>
+          <strong>~3,000</strong>
+          <p>Annotated image-response-response triplets.</p>
+        </article>
+        <article>
+          <span>Status</span>
+          <strong>2 venues</strong>
+          <p>Accepted to NeurIPS 2025 GenProCC Workshop; extended version under review at COLM 2026.</p>
+        </article>
+        <article>
+          <span>Role</span>
+          <strong>First author</strong>
+          <p>Led benchmark design, annotation verification, and experiments.</p>
+        </article>
+      </section>
+
+      <section class="case-section case-grid">
+        <div>
+          <p class="eyebrow">Problem</p>
+          <h2>AI image detectors need explanations, not just labels.</h2>
+        </div>
+        <div class="case-copy">
+          <p>
+            AI-generated image detection is moving beyond simple real/fake
+            classification toward systems that explain why an image appears
+            authentic or generated. Multimodal LLMs can act as policy models
+            that produce explanations and reward models that judge which
+            explanations are stronger.
+          </p>
+          <p>
+            XAIGID-RewardBench evaluates how well current MLLMs perform as
+            reward models for this task, identifying which models can reliably
+            judge explanation quality and where they still fall short.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-section case-grid">
+        <div>
+          <p class="eyebrow">My contribution</p>
+          <h2>Designed and executed the benchmark pipeline.</h2>
+        </div>
+        <div class="case-copy">
+          <ul class="case-list">
+            <li>First author on the research project.</li>
+            <li>Led the benchmark design and evaluation framing.</li>
+            <li>Curated and verified the full annotation set.</li>
+            <li>Formulated and executed the experimental evaluation.</li>
+            <li>Worked with AWS, Azure, PyTorch, Hugging Face, Direct Preference Optimization, and MLLM evaluation workflows.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="benchmark-section" id="benchmark">
+        <div class="section-heading compact">
+          <p class="eyebrow">Benchmark example</p>
+          <h2>One example triplet</h2>
+          <p>
+            This sample triplet shows the benchmark format: an image, two model
+            explanations, and a human preference label.
+          </p>
+        </div>
+
+        <div class="benchmark-shell">
+          <div class="game-header">
+            <div>
+              <span class="card-label">Annotation task</span>
+              <h3>Choose the stronger explanation.</h3>
+            </div>
+            <div class="score-pill" data-score-pill>Choose a response</div>
+          </div>
+          <div class="benchmark-tabs" role="tablist" aria-label="Benchmark steps">
+            <button class="benchmark-tab is-active" type="button" data-step="0">
+              1. Image task
+            </button>
+            <button class="benchmark-tab" type="button" data-step="1">
+              2. Candidate explanations
+            </button>
+            <button class="benchmark-tab" type="button" data-step="2">
+              3. Human preference
+            </button>
+            <button class="benchmark-tab" type="button" data-step="3">
+              4. Reward model evaluation
+            </button>
+          </div>
+
+          <div class="benchmark-workspace">
+            <div class="benchmark-canvas" aria-live="polite">
+              <div class="benchmark-image-card">
+                <span class="card-label">Input image</span>
+                <img
+                  class="triplet-image"
+                  src="../researchmedia/researchtripletexample.jpg"
+                  alt="Surfer falling beside a surfboard in ocean waves"
+                />
+                <p>Is this image real or AI-generated?</p>
+              </div>
+
+              <div class="benchmark-arrow flow-arrow" aria-hidden="true"></div>
+
+              <div class="response-stack">
+                <button class="response-card" type="button" data-response="0">
+                  <span class="card-label">Response 1 / GPT-4o</span>
+                  <strong>Real</strong>
+                  <p>
+                    This image appears to be real rather than AI-generated. It
+                    showcases a surfer mid-action, with realistic water dynamics,
+                    natural lighting, and shadows that are consistent with a
+                    genuine photograph.
+                  </p>
+                  <p>
+                    AI-generated images often exhibit telltale signs such as
+                    distorted objects, unnatural textures, or inconsistencies in
+                    detail. In this case, the surfboard, person, and water appear
+                    natural and true to real-life physics.
+                  </p>
+                </button>
+                <button class="response-card" type="button" data-response="1">
+                  <span class="card-label">Response 2 / Gemini 2.5 Pro</span>
+                  <strong>Real</strong>
+                  <p>
+                    This image appears to be a genuine photograph, not an
+                    AI-generated image.
+                  </p>
+                  <ol>
+                    <li>
+                      The photo has digital noise, slight blurriness, and a
+                      resolution characteristic of consumer digital cameras.
+                    </li>
+                    <li>
+                      The wipeout, splash, spray, body angle, and board position
+                      are dynamic and chaotic in a way that aligns with real-world
+                      physics.
+                    </li>
+                    <li>
+                      The image lacks common AI hallmarks such as waxy skin, odd
+                      limbs, or strange object blending.
+                    </li>
+                  </ol>
+                  <p>
+                    Overall, the image has the authentic look and feel of an
+                    action shot taken by a person with a camera.
+                  </p>
+                </button>
+              </div>
+
+              <div class="benchmark-arrow judge-arrow" aria-hidden="true"></div>
+
+              <div class="judge-card">
+                <span class="card-label">Human preference</span>
+                <strong data-human-choice>Response 2 is better</strong>
+                <p data-human-reason>
+                  Human annotators preferred Gemini's answer because it gives a
+                  more specific, evidence-grounded explanation.
+                </p>
+              </div>
+
+              <div class="evaluation-card">
+                <span class="card-label">Reward model evaluation</span>
+                <strong>Score agreement with human preference.</strong>
+                <p>
+                  Reward models receive the same image and candidate
+                  explanations, choose the stronger response, and are scored by
+                  how often their choices align with human labels across the
+                  benchmark.
+                </p>
+                <div class="evaluation-flow" aria-label="Evaluation flow">
+                  <span>Triplet</span>
+                  <span>Model pick</span>
+                  <span>Human label</span>
+                  <span>Alignment score</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="benchmark-notes">
+              <span class="step-count" data-step-count>Step 1 of 4</span>
+              <h3 data-step-title>Start with an authenticity task.</h3>
+              <p data-step-body>
+                Each item begins with an image and the question of whether it is
+                real or AI-generated.
+              </p>
+              <div class="benchmark-step-controls" aria-label="Benchmark walkthrough controls">
+                <button class="button" type="button" data-step-prev>Previous</button>
+                <button class="button primary" type="button" data-step-next>Next</button>
+              </div>
+              <dl>
+                <div>
+                  <dt>Scale</dt>
+                  <dd>~3,000 annotated triplets</dd>
+                </div>
+                <div>
+                  <dt>Role</dt>
+                  <dd>First author; benchmark design, annotation verification, experiments</dd>
+                </div>
+                <div>
+                  <dt>Methods</dt>
+                  <dd>AWS, Azure, PyTorch, Hugging Face, DPO, MLLM evaluation</dd>
+                </div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Michael Yang</p>
+      <a href="../index.html">Back to portfolio</a>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

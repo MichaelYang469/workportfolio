@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aerospace minibot navigation internship project by Michael Yang."
+    />
+    <title>Aerospace Minibot Navigation | Michael Yang</title>
+    <link rel="stylesheet" href="../styles.css?v=black-clean-sweep" />
+  </head>
+  <body class="aerospace-page">
+    <div class="ambient-field" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Michael Yang portfolio home">
+        <span class="brand-mark" aria-hidden="true">MY</span>
+        <span>Michael Yang</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#work">Work</a>
+        <a href="#navigation">Navigation</a>
+        <a href="../index.html#archive">Archive</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="case-hero">
+        <p class="eyebrow">HStar / engineering internship</p>
+        <h1>Aerospace minibot navigation system</h1>
+        <p>
+          Summer 2025 engineering internship building compact robots for
+          movement simulation, including hardware, navigation code,
+          camera-based localization, and test controls.
+        </p>
+      </section>
+
+      <section class="metric-strip" aria-label="Aerospace project summary">
+        <article>
+          <span>Role</span>
+          <strong>Engineering intern</strong>
+          <p>Worked across robot hardware, controls, and test setup.</p>
+        </article>
+        <article>
+          <span>Time</span>
+          <strong>Summer 2025</strong>
+          <p>HStar engineering internship project.</p>
+        </article>
+        <article>
+          <span>Focus</span>
+          <strong>Minibot navigation</strong>
+          <p>Path planning, localization, CAD, fabrication, and control UI.</p>
+        </article>
+      </section>
+
+      <section class="media-split" id="prototype">
+        <figure>
+          <img
+            src="../hstarmedia/hstar-minibot.jpg"
+            alt="Yellow minibot prototype with onboard electronics and fiducial target"
+          />
+          <figcaption>Prototype minibot with onboard electronics and fiducial target.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">Prototype</p>
+          <h2>Small robot platform for movement and localization tests.</h2>
+          <p>
+            The project centered on compact robots that could support controlled
+            movement experiments. I helped connect the physical prototype,
+            navigation logic, localization target, and test workflow.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-section case-grid" id="work">
+        <div>
+          <p class="eyebrow">Work</p>
+          <h2>What I worked on.</h2>
+        </div>
+        <div class="case-copy">
+          <ul class="case-list">
+            <li>Wrote navigation code that translated target positions into executable minibot motion.</li>
+            <li>Used camera-visible fiducials to estimate robot pose during tests.</li>
+            <li>Designed and fabricated custom components for the prototype platform.</li>
+            <li>Built control and integration pieces for repeated simulation runs.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="media-split reverse aerospace-loop" id="navigation">
+        <div>
+          <p class="eyebrow">Navigation loop</p>
+          <h2>Camera feedback, path planning, and control in one test loop.</h2>
+          <p>
+            Detect the robot, estimate position, plan movement, send commands,
+            and repeat the run. That loop tied the minibot hardware to the
+            software workflow.
+          </p>
+        </div>
+        <figure class="loop-figure">
+          <svg viewBox="0 0 720 420" role="img" aria-label="Minibot navigation loop diagram">
+            <rect class="loop-frame" x="28" y="28" width="664" height="364" />
+            <path class="loop-grid" d="M194 28V392 M360 28V392 M526 28V392 M28 149H692 M28 270H692" />
+            <g class="loop-node" transform="translate(132 210)">
+              <rect x="-62" y="-34" width="124" height="68" />
+              <text x="0" y="-4">Camera</text>
+              <text x="0" y="18">fiducials</text>
+            </g>
+            <g class="loop-node" transform="translate(312 110)">
+              <rect x="-62" y="-34" width="124" height="68" />
+              <text x="0" y="-4">Position</text>
+              <text x="0" y="18">estimate</text>
+            </g>
+            <g class="loop-node" transform="translate(500 110)">
+              <rect x="-62" y="-34" width="124" height="68" />
+              <text x="0" y="-4">Path</text>
+              <text x="0" y="18">planner</text>
+            </g>
+            <g class="loop-node" transform="translate(560 300)">
+              <rect x="-70" y="-34" width="140" height="68" />
+              <text x="0" y="-4">Motor</text>
+              <text x="0" y="18">commands</text>
+            </g>
+            <g class="loop-node" transform="translate(302 300)">
+              <rect x="-62" y="-34" width="124" height="68" />
+              <text x="0" y="-4">Minibot</text>
+              <text x="0" y="18">motion</text>
+            </g>
+            <path class="loop-line" d="M194 210 C238 170 250 134 250 110 H250" />
+            <path class="loop-line" d="M374 110 H438" />
+            <path class="loop-line" d="M530 144 C568 186 582 236 568 266" />
+            <path class="loop-line" d="M490 300 H364" />
+            <path class="loop-line" d="M240 300 C156 286 124 252 132 244" />
+          </svg>
+          <figcaption>Navigation-loop overview.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Michael Yang</p>
+      <a href="../index.html">Back to portfolio</a>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

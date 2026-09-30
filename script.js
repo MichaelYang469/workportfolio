@@ -1,54 +1,57 @@
 const featuredProjects = [
   {
-    title: "Explainable AI-Generated Image Detection RewardBench",
+    title: "XAIGID-RewardBench",
     area: "AI research",
     year: "2026",
-    summary:
-      "First-author benchmark for evaluating multimodal LLM reward models on explainable AI-generated image detection.",
+    summary: "4,000 annotated image-response-response triplets for MLLM reward model evaluation.",
     stack: ["Python", "PyTorch", "Hugging Face", "MLLMs"],
-    status: "NeurIPS 2025 workshop; COLM 2026 under review",
+    status: "First author; accepted to COLM 2026",
+    image: "assets/xaigid-benchmark-overview.svg",
+    alt: "XAIGID-RewardBench workflow with 4,000 annotated triplets",
     href: "projects/research.html",
   },
   {
-    title: "Aerospace Minibot Navigation System",
+    title: "HStar Minibot Navigation",
     area: "Robotics / aerospace",
     year: "2025",
-    summary:
-      "Built minibot hardware and navigation code for movement simulation, including path planning, camera localization, and test controls.",
+    summary: "Minibots that simulate coordinated satellite movement, with custom hardware, localization, and path planning.",
     stack: ["Python", "Onshape", "Sensor fusion", "Manufacturing"],
-    status: "Built during HStar internship",
+    status: "HStar Space summer internship",
+    image: "hstarmedia/hstar-minibot.jpg",
+    alt: "Yellow aerospace minibot prototype with onboard electronics",
     href: "projects/aerospace.html",
   },
   {
-    title: "FIRST Tech Challenge Robotics Program",
+    title: "FTC Robotics System",
     area: "Robotics / leadership",
-    year: "2025",
-    summary:
-      "Co-founded and captained a robotics team, contributing to robot design, build, and programming.",
+    year: "2022–2026",
+    summary: "Technical leadership across robot software, hardware, and manufacturing for two seasons; Team USA alumnus.",
     stack: ["Robot design", "Programming", "CAD", "Controls"],
-    status: "World Championship Inspire Award; 3x World Qualifier",
+    status: "Team World Championship Inspire Award; 3 World Championship qualifications",
+    image: "roboticsmedia/itd-robot-cad.png",
+    alt: "CAD render of FTC competition robot",
     href: "projects/robotics.html",
   },
 ];
 
 const archiveProjects = [
   {
-    year: "2025-2026",
-    project: "Explainable AI-Generated Image Detection RewardBench",
+    year: "2025–2026",
+    project: "XAIGID-RewardBench",
     area: "AI Research",
     stack: "Python, PyTorch, Hugging Face, MLLMs",
     href: "projects/research.html",
   },
   {
     year: "2025",
-    project: "Aerospace Minibot Navigation System",
+    project: "HStar Minibot Navigation",
     area: "Robotics / Aerospace",
     stack: "Python, Onshape, Sensor Fusion",
     href: "projects/aerospace.html",
   },
   {
-    year: "2022-2025",
-    project: "FIRST Tech Challenge Robotics",
+    year: "2022–2026",
+    project: "FTC Robotics System",
     area: "Robotics",
     stack: "Robot Design, Programming, CAD",
     href: "projects/robotics.html",
@@ -108,7 +111,7 @@ const benchmarkSteps = [
   {
     title: "Evaluate reward models against human judgment.",
     body:
-      "Reward models are scored by how often their choices align with human preferences across roughly 3,000 image-response-response triplets.",
+      "Reward models are scored by how often their choices align with human preferences across 4,000 image-response-response triplets.",
     muted: ["image"],
   },
 ];
@@ -239,9 +242,9 @@ if (projectGrid) {
       (project, index) => `
         <article class="project-card">
           <a class="project-card-link" href="${project.href}">
-            <div class="project-visual" aria-hidden="true">
+            <div class="project-visual">
+              <img src="${project.image}" alt="${project.alt}" loading="lazy" />
               <span>0${index + 1}</span>
-              <div></div>
             </div>
             <div class="project-card-body">
               <div class="project-meta">${project.year} / ${project.area}</div>
@@ -314,7 +317,7 @@ function setBenchmarkStep(stepIndex) {
   benchmarkTabs.forEach((tab) => {
     const isActive = Number(tab.dataset.step) === stepIndex;
     tab.classList.toggle("is-active", isActive);
-    tab.setAttribute("aria-selected", String(isActive));
+    tab.setAttribute("aria-pressed", String(isActive));
   });
 
   stepCount.textContent = `Step ${stepIndex + 1} of ${benchmarkSteps.length}`;

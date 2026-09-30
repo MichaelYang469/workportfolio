@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">XAIGID-RewardBench: 4,000 annotated triplets</title>
+  <desc id="desc">Each triplet pairs an image with two model explanations and a human preference label. Reward models choose an explanation and are evaluated on agreement with the human label.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#555" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="960" height="620" fill="#f4f4f0"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#161616">
+    <text x="40" y="48" font-size="16" letter-spacing="2">XAIGID-REWARDBENCH</text>
+    <text x="40" y="108" font-size="42" font-weight="700">How well do AI judges judge?</text>
+    <path d="M40 138H920" stroke="#b9b9b4"/>
+    <g fill="#fff" stroke="#b9b9b4">
+      <rect x="40" y="176" width="250" height="192"/>
+      <rect x="355" y="176" width="250" height="192"/>
+      <rect x="670" y="176" width="250" height="192"/>
+    </g>
+    <g font-size="15" letter-spacing="1" fill="#555">
+      <text x="60" y="208">01 / IMAGE</text>
+      <text x="375" y="208">02 / EXPLANATIONS</text>
+      <text x="690" y="208">03 / HUMAN LABEL</text>
+    </g>
+    <g fill="none" stroke="#161616" stroke-width="2.5">
+      <rect x="60" y="232" width="60" height="44"/>
+      <path d="M60 268 78 251 94 263 104 252 120 269"/>
+      <circle cx="106" cy="242" r="4"/>
+      <path d="M375 234h55v32h-39l-16 12z M452 246h55v32h-39l-16 12z"/>
+      <circle cx="714" cy="256" r="22"/>
+      <path d="m704 256 7 7 14-16"/>
+    </g>
+    <g font-size="21" font-weight="700">
+      <text x="60" y="313">Real or generated?</text>
+      <text x="375" y="313">Compare two answers</text>
+      <text x="690" y="313">Choose the stronger</text>
+    </g>
+    <g font-size="17" fill="#555">
+      <text x="60" y="342">An authenticity task</text>
+      <text x="375" y="342">Model-generated reasoning</text>
+      <text x="690" y="342">Evidence-based preference</text>
+    </g>
+    <g fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M306 270h32"/>
+      <path d="M621 270h32"/>
+    </g>
+    <path d="M40 398H920" stroke="#b9b9b4"/>
+    <rect x="40" y="428" width="250" height="152" fill="#161616"/>
+    <text x="60" y="496" font-size="60" font-weight="700" fill="#f4f4f0">4,000</text>
+    <text x="60" y="542" font-size="20" fill="#f4f4f0">annotated triplets</text>
+    <text x="355" y="466" font-size="16" letter-spacing="1" fill="#555">REWARD MODEL EVALUATION</text>
+    <text x="355" y="509" font-size="28" font-weight="700">Model choice → Human preference</text>
+    <text x="355" y="548" font-size="20" fill="#555">Score agreement across the benchmark.</text>
+  </g>
+</svg>

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="XAIGID-RewardBench research case study by Michael Yang."
+      content="XAIGID-RewardBench: 4,000 annotated triplets for multimodal reward model evaluation. Michael Yang’s first-author paper accepted to COLM 2026."
     />
     <title>XAIGID-RewardBench | Michael Yang</title>
-    <link rel="stylesheet" href="../styles.css?v=black-clean-sweep" />
+    <link rel="stylesheet" href="../styles.css?v=portfolio-2026" />
+    <link rel="icon" href="data:," />
   </head>
   <body class="research-page">
     <div class="ambient-field" aria-hidden="true">
@@ -31,14 +32,11 @@
       </nav>
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
       <section class="case-hero">
         <p class="eyebrow">AI research</p>
-        <h1>XAIGID-RewardBench: Explainable AI-Generated Image Detection</h1>
-        <p>
-          First-author research benchmark for evaluating whether multimodal LLMs
-          can judge explanation quality in AI-generated image detection tasks.
-        </p>
+        <h1>XAIGID-RewardBench</h1>
+        <p>Evaluating explanations for AI-generated image detection. First-author paper accepted to COLM 2026.</p>
         <div class="hero-actions" aria-label="Research links">
           <a
             class="button primary"
@@ -46,7 +44,7 @@
             target="_blank"
             rel="noreferrer"
           >
-            arXiv paper
+            Related 2025 preprint
           </a>
           <a
             class="button"
@@ -58,71 +56,50 @@
           </a>
           <a class="button" href="#benchmark">View example</a>
         </div>
+        <p class="research-context">Related work was accepted to the NeurIPS 2025 GenProCC workshop. The linked preprint and repository document that earlier work; the preprint is not the COLM 2026 publication.</p>
+      </section>
+
+      <section class="media-split research-overview">
+        <figure>
+          <img
+            src="../assets/xaigid-benchmark-overview.svg"
+            alt="XAIGID-RewardBench workflow with 4,000 annotated triplets"
+          />
+          <figcaption>Benchmark overview.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">Format</p>
+          <h2>Image. Two explanations. Human preference.</h2>
+          <ul class="case-list compact-list">
+            <li>Built dataset curation and triplet construction pipelines.</li>
+            <li>Implemented judge prompting, parsing, scoring, failure logging, and downstream experiments.</li>
+            <li>PyTorch, Hugging Face, AWS, Azure, DPO, MLLM evaluation.</li>
+          </ul>
+        </div>
       </section>
 
       <section class="metric-strip" aria-label="Research summary">
         <article>
           <span>Scale</span>
-          <strong>~3,000</strong>
-          <p>Annotated image-response-response triplets.</p>
+          <strong>4,000</strong>
+          <p>Annotated triplets.</p>
         </article>
         <article>
           <span>Status</span>
-          <strong>2 venues</strong>
-          <p>Accepted to NeurIPS 2025 GenProCC Workshop; extended version under review at COLM 2026.</p>
+          <strong>COLM 2026</strong>
+          <p>First-author paper accepted.</p>
         </article>
         <article>
           <span>Role</span>
           <strong>First author</strong>
-          <p>Led benchmark design, annotation verification, and experiments.</p>
+          <p>Design, annotations, experiments.</p>
         </article>
-      </section>
-
-      <section class="case-section case-grid">
-        <div>
-          <p class="eyebrow">Problem</p>
-          <h2>AI image detectors need explanations, not just labels.</h2>
-        </div>
-        <div class="case-copy">
-          <p>
-            AI-generated image detection is moving beyond simple real/fake
-            classification toward systems that explain why an image appears
-            authentic or generated. Multimodal LLMs can act as policy models
-            that produce explanations and reward models that judge which
-            explanations are stronger.
-          </p>
-          <p>
-            XAIGID-RewardBench evaluates how well current MLLMs perform as
-            reward models for this task, identifying which models can reliably
-            judge explanation quality and where they still fall short.
-          </p>
-        </div>
-      </section>
-
-      <section class="case-section case-grid">
-        <div>
-          <p class="eyebrow">My contribution</p>
-          <h2>Designed and executed the benchmark pipeline.</h2>
-        </div>
-        <div class="case-copy">
-          <ul class="case-list">
-            <li>First author on the research project.</li>
-            <li>Led the benchmark design and evaluation framing.</li>
-            <li>Curated and verified the full annotation set.</li>
-            <li>Formulated and executed the experimental evaluation.</li>
-            <li>Worked with AWS, Azure, PyTorch, Hugging Face, Direct Preference Optimization, and MLLM evaluation workflows.</li>
-          </ul>
-        </div>
       </section>
 
       <section class="benchmark-section" id="benchmark">
         <div class="section-heading compact">
           <p class="eyebrow">Benchmark example</p>
           <h2>One example triplet</h2>
-          <p>
-            This sample triplet shows the benchmark format: an image, two model
-            explanations, and a human preference label.
-          </p>
         </div>
 
         <div class="benchmark-shell">
@@ -133,7 +110,7 @@
             </div>
             <div class="score-pill" data-score-pill>Choose a response</div>
           </div>
-          <div class="benchmark-tabs" role="tablist" aria-label="Benchmark steps">
+          <div class="benchmark-tabs" role="group" aria-label="Benchmark steps">
             <button class="benchmark-tab is-active" type="button" data-step="0">
               1. Image task
             </button>
@@ -251,7 +228,7 @@
               <dl>
                 <div>
                   <dt>Scale</dt>
-                  <dd>~3,000 annotated triplets</dd>
+                  <dd>4,000 annotated triplets</dd>
                 </div>
                 <div>
                   <dt>Role</dt>
@@ -273,6 +250,6 @@
       <a href="../index.html">Back to portfolio</a>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script.js?v=portfolio-2026"></script>
   </body>
 </html>

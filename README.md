@@ -16,10 +16,10 @@ http://localhost:5173
 
 ## Edit content
 
-- Featured projects live in `featuredProjects` inside `script.js`.
-- Archive rows live in `archiveProjects` inside `script.js`.
-- Homepage introduction, experience, education, skills, and leadership live in `index.html`.
-- Visual styling lives in `styles.css`.
+- The text-only homepage and expandable project descriptions live in `index.html`.
+- Homepage styling lives in `index.css`. It uses native HTML disclosures and works without JavaScript; one item opens at a time.
+- The collapsed homepage is designed to fit one screen; expanded descriptions can scroll normally on smaller screens.
+- Detailed project pages retain their media and demos. Base layouts live in `styles.css`, the simpler presentation in `minimal.css`, and interactions in `script.js`.
 - Resume link points to `assets/Michael-Yang-Resume.pdf`.
 - The downloadable resume is an unchanged copy of the supplied `Michael_Yang.pdf`.
 - The current benchmark diagram is `assets/xaigid-benchmark-overview.svg`; the older PNG is retained as a historical asset and is not displayed.
